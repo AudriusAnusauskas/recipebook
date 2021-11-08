@@ -1,0 +1,17 @@
+<div class="col-md-12">
+    <div class="card mt-5">
+        <div class="card-header">Rasykite Recepta</div>
+        <div class="card-body">
+            <form (ngSubmit)="onPostRecipe(forma)" #forma="ngForm">
+                <div class="mb-3">
+                    <label for="" class="form-label">Recepto pavadinimas</label>
+                    <input type="text" class="form-control" ngModel name="name" required>
+                    <hr>
+                    <label for="" class="form-label">Recepto aprasymas</label>
+                    <textarea type="text" class="form-control" ngModel name="text" required></textarea>
+                    <button type="submit" class="btn btn-success mt-5"[disabled]="!forma.valid">Issiusti</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
